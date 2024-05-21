@@ -13,16 +13,25 @@
 	<?php wp_head() ?>
 </head>
 
-<body class="homepage is-preload">
+<body <?php body_class('homepage is-preload') ?>>
 	<div id="page-wrapper">
 
 		<!-- Header -->
 		<section id="header">
 			<!-- Logo -->
-			<h1><a href="index.html">Dopetrope</a></h1>
+
+
+			<h1><a href="index.html"><?php the_custom_logo() ?></a></h1>
 			<!-- Nav -->
 			<nav id="nav">
-				<ul>
+				<?php wp_nav_menu(
+					array(
+						'theme_location' => 'primary',
+						'container' => ''
+					)
+				) ?>
+
+				<!-- <ul>
 					<li class="current"><a href="index.html">Home</a></li>
 					<li>
 						<a href="#">Dropdown</a>
@@ -46,6 +55,6 @@
 					<li><a href="left-sidebar.html">Left Sidebar</a></li>
 					<li><a href="right-sidebar.html">Right Sidebar</a></li>
 					<li><a href="no-sidebar.html">No Sidebar</a></li>
-				</ul>
+				</ul> -->
 			</nav>
 		</section>
