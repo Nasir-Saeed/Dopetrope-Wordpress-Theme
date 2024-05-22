@@ -114,3 +114,12 @@ add_action("wp_enqueue_scripts", "dopetropewp_scripts");
 
 // Porfolio Section
 require get_template_directory().'/inc/portfolio.php';
+
+
+// Plugin Require
+// require_once get_template_directory().'/inc/class-tgm-plugin-activation.php';
+// require get_template_directory().'/inc/install-plugins.php';
+
+
+// kirki Embedded
+require get_template_directory().'/inc/plugins/kirki/kirki.php';
