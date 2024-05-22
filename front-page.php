@@ -2,7 +2,6 @@
 get_header();
 ?>
 
-
 <!-- Banner -->
 <section id="banner">
     <header>
