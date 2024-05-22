@@ -15,6 +15,7 @@
     add_theme_support('post-thumbnails');
 
     add_image_size('home-featured', 680, 400, array('center', 'center'));
+    add_image_size('single-post', 580, 272, array('center', 'center'));
 
     add_theme_support('automatic-feed-links');
 
@@ -36,13 +37,35 @@ function dopetropewp_widgets_init()
             'name' => __('Primary Sidebar', 'dopetropewp'),
             'id' => 'main-sidebar',
             'description' => 'Main Sidebar on Right Side',
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget' => '</aside>',
-            'before_title' => '<h3 class="widget-title">',
-            'after_title' => '</h3>',
+            'before_widget' => '<section id="%1$s" class="box %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<header><h3 class="widget-title">',
+            'after_title' => '</h3></header>',
         )
     );
 
+    register_sidebar(
+        array(
+            'name' => __('Home Banner', 'dopetropewp'),
+            'id' => 'home-banner',
+            'description' => 'Home Banner Image Area',
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<header><h2 class="widget-title">',
+            'after_title' => '</h2></header>',
+        )
+    );
+    register_sidebar(
+        array(
+            'name' => __('Home Services', 'dopetropewp'),
+            'id' => 'home-services',
+            'description' => 'Home Services Area Section',
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<header><h2 class="widget-title">',
+            'after_title' => '</h2></header>',
+        )
+    );
     register_sidebar(
         array(
             'name' => __('Footer Widget 1', 'dopetropewp'),
@@ -90,4 +113,4 @@ function dopetropewp_scripts()
 add_action("wp_enqueue_scripts", "dopetropewp_scripts");
 
 // Porfolio Section
-require get_template_directory() ."/inc/portfolio.php";
+require get_template_directory().'/inc/portfolio.php';
