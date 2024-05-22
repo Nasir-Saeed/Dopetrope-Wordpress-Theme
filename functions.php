@@ -88,3 +88,6 @@ function dopetropewp_scripts()
     wp_enqueue_script('jquery');
 }
 add_action("wp_enqueue_scripts", "dopetropewp_scripts");
+
+// Porfolio Section
+require get_template_directory() ."/inc/portfolio.php";
