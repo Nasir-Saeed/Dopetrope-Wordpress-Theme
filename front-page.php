@@ -21,7 +21,8 @@ get_header();
             <div class="row">
                 <div class="col-4 col-12-medium">
                     <section class="first">
-                        <i class="icon solid featured alt dashicons dashicons-<?php echo esc_attr( get_theme_mod("intro_box_icon", 'admin-generic') ); ?>"></i>
+                        <!-- <i class="icon solid featured alt dashicons dashicons-<?php echo esc_attr( get_theme_mod("intro_box_icon", 'admin-generic') ); ?>"></i> -->
+                        <i class="icon solid featured alt fa-cog"></i>
                         <header>
                             <h2>Ipsum consequat</h2>
                         </header>

@@ -2201,7 +2201,7 @@ ul.social li a.fa-google-plus:hover {
 	position: relative;
 	background: #ffffff;
 	border-bottom: solid 1px #ccc;
-	padding: 5em 0 4em 0;
+	padding: 10px 0 0 0;
 	text-align: center;
 }
 
@@ -2216,7 +2216,8 @@ ul.social li a.fa-google-plus:hover {
 /* Nav */
 
 #nav {
-	margin: 2.5em 0 0 0;
+	margin: 20px 0 0 0;
+	padding: 15px;
 }
 
 #nav>ul {
@@ -2244,7 +2245,7 @@ ul.social li a.fa-google-plus:hover {
 
 #nav>ul>li>a {
 	border-radius: 5px;
-	color: #5d5d5d;
+	color: #ffffff;
 	text-decoration: none;
 	padding: 0.6em 1.2em 0.6em 1.2em;
 	-moz-transition: background-color .25s ease-in-out;
@@ -2257,6 +2258,8 @@ ul.social li a.fa-google-plus:hover {
 #nav>ul>li:hover>a,
 #nav>ul>li.active>a {
 	background: #f3f3f3;
+	color: #5d5d5d;
+
 }
 
 #nav>ul>li.current-menu-item > a {

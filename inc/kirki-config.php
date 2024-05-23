@@ -117,7 +117,7 @@ Kirki::add_field('dopetropewp_option', [
     'transport' => 'auto',
     'output' => [
         [
-            'element' => '#nav > ul > li > a:hover , #nav > ul > li.current-menu-item > a',
+            'element' => '#nav>ul>li.active>a , #nav > ul > li.current-menu-item > a',
         ],
     ],
 ]);
