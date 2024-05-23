@@ -5,7 +5,7 @@
  */
 
 // Supports Links
- function dopetropewp_theme_setup()
+function dopetropewp_theme_setup()
 {
 
     add_theme_support('custom-logo');
@@ -104,6 +104,7 @@ add_action('widgets_init', 'dopetropewp_widgets_init');
 function dopetropewp_scripts()
 {
     wp_enqueue_style("style", get_stylesheet_uri());
+    wp_enqueue_style('dashicons');
     wp_enqueue_script("dopetropewp-browser-min", get_template_directory_uri() . '/assets/js/browser.min.js');
     wp_enqueue_script("dopetropewp-breakpoints-min", get_template_directory_uri() . '/assets/js/breakpoints.min.js');
     wp_enqueue_script("dopetropewp-util", get_template_directory_uri() . '/assets/js/util.js');
@@ -113,7 +114,7 @@ function dopetropewp_scripts()
 add_action("wp_enqueue_scripts", "dopetropewp_scripts");
 
 // Porfolio Section
-require get_template_directory().'/inc/portfolio.php';
+require get_template_directory() . '/inc/portfolio.php';
 
 
 // Plugin Require
@@ -122,4 +123,5 @@ require get_template_directory().'/inc/portfolio.php';
 
 
 // kirki Embedded
-require get_template_directory().'/inc/plugins/kirki/kirki.php';
+require get_template_directory() . '/inc/plugins/kirki/kirki.php';
+require get_template_directory() . '/inc/kirki-config.php';
